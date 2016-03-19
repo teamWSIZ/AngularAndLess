@@ -1,0 +1,31 @@
+
+
+.table-variant(@tableBg; @thBg; @borderColor)
+{
+    width: 100%;
+    background: @tableBg;
+
+    & thead td{
+        font-weight: bold;
+    }
+    
+    & tbody tr:nth-child(odd)
+        {
+        background: darken(@thBg, 10%);
+    }
+    & tbody tr:nth-child(even)
+        {
+        background: @thBg;
+    }
+    & td {
+        border:1px solid @borderColor;
+    }    
+}
+
+.tab-v1{
+    .table-variant(gray, #fafafa, #000);
+}
+
+.tab-v2{
+    .table-variant(yellow, #fcfcfc,  #000);
+}
