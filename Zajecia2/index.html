@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Witryna 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="css/nowy.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <table class="tab-v2">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nazwa</td>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr ng-repeat="item in tablica">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nazwa}}</td>
+                    <!-- td><input ng-model="item.nazwa"/></td -->
+                </tr>
+            </tbody>
+            </table>
+            <hr>      {{ tablica }}
+        </div>
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.tablica = [
+                {'id':1, 'nazwa':'Pole 1'},  
+                {'id':1, 'nazwa':'Pole 1'}  
+            ];
+            
+            
+        });
+        </script> 
+        
+    </body>
+</html>
