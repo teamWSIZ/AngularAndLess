@@ -7,6 +7,19 @@ angular.module('myApp.controllers').controller('masterCtrl',
         function ($rootScope, $scope, $http) {
             console.log('Uruchamiam kontroler');
 
+            $scope.napis = 'Abra kadabra';
+            
+            $scope.tabRezerwacji = [{id:1, nazwa:'Alpha'}, 
+                {id:2, nazwa:'Beta'}, {id:3, nazwa:'Gamma'}];
+
+            $scope.nowa = {id: '', nazwa: ''};
+
+            $scope.dodajRezerwacje = function (nnn) {
+                $scope.tabRezerwacji.push(nnn);
+                $scope.nowa = {id: '', nazwa: ''};
+                $scope.MMM.showNewBooking = false;
+            };
+
 
         //    Tu piszemy funkcje dostępne w view:
             $scope.loadIt = function() {
@@ -21,6 +34,7 @@ angular.module('myApp.controllers').controller('masterCtrl',
                     params: toSave
                 }).success(function(data){
                     //tu mamy dostęp do scope
+                    // $scope.tabRezerwacji = data.result;
                 });
             }
 
