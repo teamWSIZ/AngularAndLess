@@ -1,3 +1,19 @@
+Podstawowe akcje pracy z repozytoriami zdalnymi:
+
+# Klonowanie tego repozytorium:
+git clone git@github.com:teamWSIZ/AngularAndLess.git        #jeśli to nasze repo i klucze są dodane
+git clone https://github.com/teamWSIZ/AngularAndLess.git    #jeśli to publiczne repo
+
+# Wybranie gałęzi "feature"
+git checkout feature
+
+# Robienie commit-a
+git add .       #albo które file
+git commit -m "Co ciekawego zrobiliśmy"
+
+# Wrzucenie do własnego repo:
+git push
+
 
 
 
