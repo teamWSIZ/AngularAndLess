@@ -1,0 +1,1 @@
+Niektóre mocno zbędne gałęzie zostały usunięte; by usunąć je lokalnie: git fetch --all --prune
