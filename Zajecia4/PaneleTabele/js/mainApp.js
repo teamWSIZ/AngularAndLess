@@ -14,6 +14,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     }).when('/view1', {
         templateUrl: urlBase + 'otherView.html',
         controller: 'masterCtrl'
+    }).when('/rezerwacje', {
+        templateUrl: urlBase + 'rezerwacjeView.html',
+        controller: 'masterCtrl'
     }).when('/view2', {
         templateUrl: urlBase + 'exampleView.html',
         controller: 'masterCtrl'
