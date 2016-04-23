@@ -18,8 +18,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: urlBase + 'rezerwacjeView.html',
         controller: 'masterCtrl'
     }).when('/view2', {
-        templateUrl: urlBase + 'exampleView.html',
-        controller: 'masterCtrl'
+        templateUrl: urlBase + 'serwisHttp.html',
+        controller: 'internetowyCtrl'
     });
 }]);
 
