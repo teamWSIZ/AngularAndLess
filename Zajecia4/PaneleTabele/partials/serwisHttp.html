@@ -10,7 +10,7 @@
         </div>
 
         <div class="panel-footer">
-            <button ng-click="loadPosts()">Load post data</button>
+            <button ng-click="prostyLoad()">Zaciągnij posty</button>
             <span>
                 Status:  <br>
             </span>
@@ -30,7 +30,26 @@
         <div class="panel-body" >
             <p>Lorem ipsum dolor sit ...</p>
 
-            <p> Posty: <br> {{posty}}</p>
+            <table class="table table-bordered table-responsive
+            table-condensed table-striped">
+                <thead>
+                <tr>
+                    <td> Postid</td>
+                    <td> Userid</td>
+                    <td> Tytuł</td>
+                    <td> Treść</td>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in posty">
+                        <td> {{item.id}}</td>
+                        <td> {{item.userId}}</td>
+                        <td> {{item.title}}</td>
+                        <td> {{item.body.substring(0,40)}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<p> Posty: <br> {{posty}}</p>-->
 
         </div>
         <div class="panel-footer">
