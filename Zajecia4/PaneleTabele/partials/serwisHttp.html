@@ -11,6 +11,7 @@
 
         <div class="panel-footer">
             <button ng-click="prostyLoad()">Zaciągnij posty</button>
+            <button ng-click="sendPostX()">Karrramba - wyślij...</button>
             <span>
                 Status:  <br>
             </span>
@@ -29,6 +30,8 @@
 
         <div class="panel-body" >
             <p>Lorem ipsum dolor sit ...</p>
+            <input ng-model="fff" placeholder="Filtrowanie...">
+            {{fff}}
 
             <table class="table table-bordered table-responsive
             table-condensed table-striped">
@@ -41,7 +44,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in posty">
+                    <tr ng-repeat="item in M.posty | filter:fff">
                         <td> {{item.id}}</td>
                         <td> {{item.userId}}</td>
                         <td> {{item.title}}</td>
@@ -53,7 +56,14 @@
 
         </div>
         <div class="panel-footer">
-            Footer...
+            Wpisz pesel:<br>
+            <input class="form-control form-danger" ng-model="pesel" >
+            <div class="glyphicon" ng-class="(isValidPesel(pesel)) ?
+                'glyphicon-ok text-success' :  'glyphicon-remove text-danger'"></div>
+            <br>
+            <!--<div class="alert alert-danger" ng-if="pesel.length!=4">-->
+                <!--Pesel powinien być długośći 4 a jest długości {{pesel.length}}-->
+            <!--</div>-->
         </div>
     </div>
 </div>
