@@ -5,12 +5,15 @@ angular.module('myApp.controllers',[]);
 angular.module('myApp.controllers').controller('masterCtrl',
     ['$rootScope','$scope', '$http',
         function ($rootScope, $scope, $http) {
-            console.log('Uruchamiam kontroler');
+            console.log('Uruchamiam masterCtrl');
 
             $scope.napis = 'Abra kadabra';
             
-            $scope.tabRezerwacji = [{id:1, nazwa:'Alpha'}, 
-                {id:2, nazwa:'Beta'}, {id:3, nazwa:'Gamma'}];
+            $scope.tabRezerwacji = [
+                {id:1, nazwa:'Alpha'},
+                {id:2, nazwa:'Beta'},
+                {id:3, nazwa:'Gamma'}
+            ];
 
             $scope.nowa = {id: '', nazwa: ''};
 

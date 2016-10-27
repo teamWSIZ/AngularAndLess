@@ -3,7 +3,7 @@
 angular.module('myApp.controllers').controller('internetowyCtrl',
     ['$rootScope','$scope', '$http',
         function ($rootScope, $scope, $http) {
-            console.log('Uruchamiam kontroler netowy');
+            console.log('Uruchamiam internetowyCtrl');
             $scope.M = {};
             $scope.M.posty = [];
             $scope.fff = '';

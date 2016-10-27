@@ -24,7 +24,16 @@ app.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 app.run(function ($rootScope) {
+    console.log('Uruchamiam app.run');
     //Model object --- main data
     $rootScope.M = {};
     $rootScope.M.url = 'http://localhost:8090/forum-0.1.1/';
+
+    $rootScope.dyplomanci = [
+        {nazwisko:'Xilan', imie:'Wu', studentid:1},
+        {nazwisko:'Xi', imie:'Jinping', studentid:2},
+        {nazwisko:'Hu', imie:'Jintao', studentid:3}
+    ];
+    $rootScope.M.selEgz = {};
+    $rootScope.M.selEgz.student = $rootScope.dyplomanci[0];
 });
