@@ -1,8 +1,8 @@
 
 
 angular.module('myApp.controllers').controller('internetowyCtrl',
-    ['$rootScope','$scope', '$http',
-        function ($rootScope, $scope, $http) {
+    ['$rootScope','$scope', '$location', '$http',
+        function ($rootScope, $scope, $location, $http) {
             console.log('Uruchamiam internetowyCtrl');
             $scope.M = {};
             $scope.M.posty = [];
@@ -48,6 +48,28 @@ angular.module('myApp.controllers').controller('internetowyCtrl',
                 return false;
             }
 
+            //funkcje do obsługi panelu 'login'
+            $scope.user = {album: '', pass: '', isLogIn: false};
+            
+            $scope.login = function() {
+                var u = $scope.user;
+                authSrv.login(u.album, u.pass).success(function(data){
+                    if (data.status==='OK') {
+                        $scope.user.isLogIn = true;
+                        $location.path("/administracja");//redirect
+                    } else {
+                        $scope.message = 'Błąd logowania';
+                        alert($scope.message);
+                        $scope.user.isLogIn = false;
+                    }
+                });
+            };
+            
+            $scope.logout = function() {
+                authSrv.logout();
+                $scope.user = {album: '', pass: '', isLogIn: false};
+                $location.path("/");
+            };
             
             
 
