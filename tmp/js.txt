@@ -1,0 +1,22 @@
+JS: 
+
+Arrays: 
+pop() : as queue.pop() 
+slice(a,b) 	: copies [a,b)
+slice(-2)	: last 2 elems (in order)
+
+a.filter(function(e){...}) --> new array; function executed on each element
+a.map(function(x){ return..}) --> new array composed of results
+
+A.forEach(function(x){console.log(x.a)});
+
+#attaching fn to array objects: 
+Array.prototype.aaa = function() { console.log('hihihihi');}  //to class; can also attach to instance
+w.aaa();
+
+filter 		returns an array of items that satisfy some condition or test.
+every 		returns true if every array member passes the test.
+some 		returns true if any pass the test.
+forEach 	runs a function on each array member and doesn't return anything.
+map 		is like forEach, but it returns an array of the results of the operation for each element.
+
