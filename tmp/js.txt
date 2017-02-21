@@ -20,3 +20,46 @@ some 		returns true if any pass the test.
 forEach 	runs a function on each array member and doesn't return anything.
 map 		is like forEach, but it returns an array of the results of the operation for each element.
 
+
+#map
+a = {};
+a[14] = 'Bura';
+a[114] = 'Warao';
+for(var i = 0; i< 115; i++) { console.log(a[i]); }
+
+#set
+var ss = {}
+- Testing for inclusion in a set
+if( ss['a'] ){
+    alert('"a" is in set');
+}
+- Adding an element to a set
+ss['d'] = true;
+- Removing an element from a set
+delete ss['a'];
+- looping on keys:
+for(var p in ss) console.log(ss[p]);
+
+#########################################
+## ES6 in angular
+
+    let sk = new Set();
+    sk.add('a');
+    sk.add('b');
+    console.log(sk.size);
+    console.log(sk.has('a'));
+    console.log(sk.has('c'));   //set; map too
+    a = 11;
+    b = 12;
+    let bbb = `Zmienna a=${a}, b=${b}`; //insert into string !!! works OK --> so have ES6
+    console.log(bbb);
+    var {ax, ay} = {ax:11, ay:12};  //assignment
+    console.log(ax);
+    let aa = [1, 2, 3];
+
+    //equivalent
+    console.log(aa.map(function (e) {
+        return e*e;
+    }));
+    console.log(aa.map((e)=>{ return e*2;}));
+
