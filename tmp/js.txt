@@ -42,24 +42,33 @@ for(var p in ss) console.log(ss[p]);
 
 #########################################
 ## ES6 in angular
+#########################################
 
-    let sk = new Set();
-    sk.add('a');
-    sk.add('b');
-    console.log(sk.size);
-    console.log(sk.has('a'));
-    console.log(sk.has('c'));   //set; map too
-    a = 11;
-    b = 12;
-    let bbb = `Zmienna a=${a}, b=${b}`; //insert into string !!! works OK --> so have ES6
-    console.log(bbb);
-    var {ax, ay} = {ax:11, ay:12};  //assignment
-    console.log(ax);
-    let aa = [1, 2, 3];
+let sk = new Set();
+sk.add('a');
+sk.add('b');
+console.log(sk.size);
+console.log(sk.has('a'));
+console.log(sk.has('c'));   //set; map too
 
-    //equivalent
-    console.log(aa.map(function (e) {
-        return e*e;
-    }));
-    console.log(aa.map((e)=>{ return e*2;}));
+a = 11;
+b = 12;
+let bbb = `Zmienna a=${a}, b=${b}`; //insert into string !!! works OK --> so have ES6
+
+var {ax, ay} = {ax:11, ay:12};  //assignment
+let aa = [1, 2, 3];
+
+//equivalent
+console.log(aa.map(function (e) {
+    return e*e;
+}));
+console.log(aa.map((e)=>{ return e*2;}));
+
+# map
+let m = new Map();
+m.set(112,'Abra');
+m.has(112);
+for(let [key,val] of m) ...
+for(let w of m.keys()) ...
+
 
